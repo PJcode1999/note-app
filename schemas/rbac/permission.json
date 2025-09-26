@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/rbac/permission.json",
+  "title": "Permission",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string", "format": "uuid" },
+    "resource": { "type": "string", "enum": ["venue", "service", "resource", "booking", "offer"] },
+    "action": { "type": "string", "enum": ["create", "read", "update", "delete", "approve"] },
+    "key": { "type": "string", "pattern": "^[a-z]+:[a-z]+$" }
+  },
+  "required": ["resource", "action"]
+}
+

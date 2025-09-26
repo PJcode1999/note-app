@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/rbac/user_role.json",
+  "title": "UserRole",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "userId": { "type": "string", "format": "uuid" },
+    "roleId": { "type": "string", "format": "uuid" }
+  },
+  "required": ["userId", "roleId"]
+}
+

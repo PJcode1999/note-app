@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/rbac/role_permission.json",
+  "title": "RolePermission",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "roleId": { "type": "string", "format": "uuid" },
+    "permissionId": { "type": "string", "format": "uuid" }
+  },
+  "required": ["roleId", "permissionId"]
+}
+
