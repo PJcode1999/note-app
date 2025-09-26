@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/rbac/policy_check.json",
+  "title": "PolicyCheck",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "userId": { "type": "string", "format": "uuid" },
+    "resource": { "type": "string", "enum": ["venue", "service", "resource", "booking", "offer"] },
+    "action": { "type": "string", "enum": ["create", "read", "update", "delete", "approve"] },
+    "resourceOwnerId": { "type": "string", "format": "uuid" }
+  },
+  "required": ["userId", "resource", "action"]
+}
+
